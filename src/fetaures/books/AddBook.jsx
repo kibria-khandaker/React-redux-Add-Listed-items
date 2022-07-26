@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addBook } from './BooksSlice';
 import { v4 as uuidv4 } from 'uuid';
+import { Link } from 'react-router-dom';
 
 const AddBook = () => {
     const [title, setTitle] = useState("");
@@ -36,6 +37,7 @@ const AddBook = () => {
                 <button type="submit">Add Book </button>
             </form>
 
+            <Link to='/show-books'> <button>Back to Book List</button> </Link>
         </div>
     );
 };

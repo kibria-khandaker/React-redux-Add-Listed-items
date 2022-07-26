@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { updateBook } from './BooksSlice';
+import { Link } from 'react-router-dom';
 
 const EditBook = () => {
     const location = useLocation();
@@ -35,6 +36,7 @@ const EditBook = () => {
                 </div>
                 <button type="submit"> Update Book </button>
             </form>
+            <Link to='/show-books'> <button>Back to Book List</button> </Link>
         </div>
     );
 };
